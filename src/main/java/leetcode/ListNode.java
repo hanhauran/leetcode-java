@@ -22,4 +22,11 @@ public class ListNode {
         }
         return builder.substring(0, builder.length() - 1).toString();
     }
+
+    public static final ListNode EXAMPLE;
+    static {
+        EXAMPLE = new ListNode(1);
+        EXAMPLE.next = new ListNode(2);
+        EXAMPLE.next.next = new ListNode(3);
+    }
 }
