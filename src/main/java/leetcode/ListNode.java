@@ -20,7 +20,7 @@ public class ListNode {
             builder.append(tmp.val).append(",");
             tmp = tmp.next;
         }
-        return builder.substring(0, builder.length() - 1).toString();
+        return builder.substring(0, builder.length() - 1);
     }
 
     public static final ListNode EXAMPLE;
