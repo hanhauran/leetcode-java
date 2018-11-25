@@ -18,4 +18,12 @@ public class TreeNode {
     public String toString() {
         return "TreeNode{val=" + val + "}";
     }
+
+    public static TreeNode EXAMPLE = new TreeNode(1);
+    static {
+        TreeNode left = new TreeNode(2);
+        TreeNode right = new TreeNode(3);
+        EXAMPLE.left = left;
+        EXAMPLE.right = right;
+    }
 }
