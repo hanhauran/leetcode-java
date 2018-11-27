@@ -62,8 +62,6 @@ public class Code101 {
     }
 
     public static void main(String[] args) {
-        Code101 code = new Code101();
-
         Deque<Integer> deque = new LinkedList<>();
         deque.offerFirst(null);
         deque.offerLast(1);

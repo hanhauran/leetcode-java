@@ -30,3 +30,9 @@ hs_err_pid*
 target/
 *.iml
 
+# Vs Code #
+.settings/
+.vscode/
+.classpath
+.factorypath
+.project
