@@ -5,7 +5,7 @@ package leetcode.code200;
  * @date 2018/10/26
  */
 
-public class Code136 {
+public class Code136_SingleNumberInArray {
     public int singleNumber(int[] nums) {
         if (nums.length == 1) {
             return nums[0];
@@ -19,7 +19,7 @@ public class Code136 {
     }
 
     public static void main(String[] args) {
-        Code136 code = new Code136();
+        Code136_SingleNumberInArray code = new Code136_SingleNumberInArray();
         System.out.println(code.singleNumber(new int[]{2, 2, 1}));
     }
 }
