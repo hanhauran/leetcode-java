@@ -9,7 +9,7 @@ import java.util.List;
  * @date 2018/12/2 14:36
  */
 
-public class Code438 {
+public class Code438_SlidingWindow {
     public List<Integer> findAnagrams(String target, String fragment) {
         if (target == null || target.length() == 0 || fragment == null || fragment.length() == 0) {
             return Collections.emptyList();
@@ -40,7 +40,7 @@ public class Code438 {
     }
 
     public static void main(String[] args) {
-        Code438 code = new Code438();
+        Code438_SlidingWindow code = new Code438_SlidingWindow();
         System.out.println(code.findAnagrams("abcdabc", "bca"));
     }
 }
