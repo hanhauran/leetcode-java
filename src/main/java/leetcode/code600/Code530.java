@@ -2,6 +2,7 @@ package leetcode.code600;
 
 import leetcode.TreeNode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,24 +12,25 @@ import java.util.List;
 
 public class Code530 {
     public int getMinimumDifference(TreeNode root) {
-        return 0;
+        List<Integer> list = new ArrayList<>();
+        // this method is in TreeNode
+        root.list2(list);
 
-//        if (root == null) {
-//            return Integer.MAX_VALUE;
-//        }
-//
-//        int left = Integer.MAX_VALUE, right = Integer.MAX_VALUE;
-//        if (root.left != null) {
-//            left = root.val - root.left.val;
-//        }
-//        if (root.right != null) {
-//            right = root.right.val - root.val;
-//        }
-//        return Math.min(Math.min(left, right), Math.min(getMinimumDifference(root.left), getMinimumDifference(root.right)));
+        int depth = Integer.MAX_VALUE;
+        for (int i = 0; i < list.size() - 1; i++) {
+            int tmp = Math.abs(list.get(i) - list.get(i + 1));
+            if (tmp < depth) {
+                depth = tmp;
+            }
+        }
+
+        return depth;
     }
 
     public static void main(String[] args) {
         Code530 code = new Code530();
-        TreeNode.EXAMPLE.print2();
+        List<Integer> list = new ArrayList<>();
+        TreeNode.EXAMPLE.list2(list);
+        System.out.println(list);
     }
 }

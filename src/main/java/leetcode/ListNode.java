@@ -1,5 +1,9 @@
 package leetcode;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * @author ihhr
  * @date 2018/10/23
@@ -10,6 +14,23 @@ public class ListNode {
     public ListNode next;
     public ListNode(int x) {
         val = x;
+    }
+
+    public List<Integer> list() {
+        return list(this);
+    }
+
+    public static List<Integer> list(ListNode node) {
+        if (node == null) {
+            return Collections.emptyList();
+        }
+
+        List<Integer> res = new ArrayList<>();
+        while (node != null) {
+            res.add(node.val);
+            node = node.next;
+        }
+        return res;
     }
 
     @Override
