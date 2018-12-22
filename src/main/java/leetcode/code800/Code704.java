@@ -11,15 +11,18 @@ public class Code704 {
     }
 
     private int helper(int[] nums, int left, int right, int target) {
-        if (left + 1 >= right) {
-            if (nums[left] == target) {
-                return left;
-            } else if (nums[right] == target) {
-                return right;
-            } else {
-                return -1;
-            }
+        if (left >= right) {
+            return nums[left] == target ? left : -1;
         }
+//        if (left + 1 >= right) {
+//            if (nums[left] == target) {
+//                return left;
+//            } else if (nums[right] == target) {
+//                return right;
+//            } else {
+//                return -1;
+//            }
+//        }
 
         int mid = left + (right - left) / 2;
         if (nums[mid] < target) {
@@ -33,6 +36,6 @@ public class Code704 {
 
     public static void main(String[] args) {
         Code704 code = new Code704();
-        System.out.println(code.search(new int[]{-1, 0, 3, 5, 9, 12}, 2));
+        System.out.println(code.search(new int[]{-1, 0}, -2));
     }
 }
