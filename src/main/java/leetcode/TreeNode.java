@@ -106,6 +106,7 @@ public class TreeNode {
     }
 
     public static TreeNode EXAMPLE = new TreeNode(2);
+    public static TreeNode EXAMPLE2 = new TreeNode(3);
     static {
         TreeNode left = new TreeNode(1);
         TreeNode right = new TreeNode(3);
@@ -113,5 +114,14 @@ public class TreeNode {
         EXAMPLE.right = right;
         left = new TreeNode(0);
         EXAMPLE.left.left = left;
+
+        EXAMPLE2.left = new TreeNode(5);
+        EXAMPLE2.left.left = new TreeNode(6);
+        EXAMPLE2.left.right = new TreeNode(2);
+        EXAMPLE2.left.right.left = new TreeNode(7);
+        EXAMPLE2.left.right.right = new TreeNode(4);
+        EXAMPLE2.right = new TreeNode(1);
+        EXAMPLE2.right.left = new TreeNode(9);
+        EXAMPLE2.right.right = new TreeNode(8);
     }
 }
