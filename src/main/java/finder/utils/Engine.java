@@ -1,8 +1,8 @@
-package annotation.utils;
+package finder.utils;
 
-import annotation.Fucked;
-import annotation.Interesting;
-import annotation.Unsolved;
+import finder.annotation.Fucked;
+import finder.annotation.Interesting;
+import finder.annotation.Unsolved;
 import org.reflections.Reflections;
 
 import java.lang.annotation.Annotation;
@@ -23,14 +23,14 @@ public class Engine {
         private static final Engine INSTANCE = new Engine();
     }
 
-    private static final Map<Class<? extends Annotation>, ProcessExt> EXT_MAP = new ConcurrentHashMap<>();
+    private static final Map<Class<? extends Annotation>, Processor> EXT_MAP = new ConcurrentHashMap<>();
     private static final Reflections REFLECTIONS = new Reflections("leetcode");
 
     private Engine() {
         try {
-            EXT_MAP.put(Fucked.class, FuckedProcessExt.class.newInstance());
-            EXT_MAP.put(Interesting.class, InterestingProcessExt.class.newInstance());
-            EXT_MAP.put(Unsolved.class, UnsolvedProcessExt.class.newInstance());
+            EXT_MAP.put(Fucked.class, FuckedProcessor.class.newInstance());
+            EXT_MAP.put(Interesting.class, InterestingProcessor.class.newInstance());
+            EXT_MAP.put(Unsolved.class, UnsolvedProcessor.class.newInstance());
         } catch (Exception e) {
             System.exit(-1);
         }
@@ -38,7 +38,7 @@ public class Engine {
 
     public String process(Class<? extends Annotation> anno) {
         Set<Class<?>> classes = REFLECTIONS.getTypesAnnotatedWith(anno);
-        ProcessExt processExt = EXT_MAP.get(anno);
-        return processExt.process(classes);
+        Processor processor = EXT_MAP.get(anno);
+        return processor.process(classes);
     }
 }

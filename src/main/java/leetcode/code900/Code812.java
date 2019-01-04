@@ -1,9 +1,7 @@
 package leetcode.code900;
 
-import annotation.Level;
-import annotation.Levels;
-
-import java.util.Arrays;
+import finder.annotation.Level;
+import finder.annotation.Levels;
 
 /**
  * @author hr.han

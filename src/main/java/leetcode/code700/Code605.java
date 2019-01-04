@@ -1,6 +1,6 @@
 package leetcode.code700;
 
-import annotation.Fucked;
+import finder.annotation.Fucked;
 
 /**
  * @author hr.han

@@ -1,6 +1,6 @@
-package annotation.utils;
+package finder.utils;
 
-import annotation.Interesting;
+import finder.annotation.Interesting;
 
 import java.util.Set;
 
@@ -9,7 +9,7 @@ import java.util.Set;
  * @date 2018/12/26 11:17
  */
 
-public class InterestingProcessExt implements ProcessExt {
+public class InterestingProcessor implements Processor {
     @Override
     public String process(Set<Class<?>> classes) {
         StringBuilder builder = new StringBuilder();

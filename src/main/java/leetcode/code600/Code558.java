@@ -1,6 +1,6 @@
 package leetcode.code600;
 
-import annotation.Unsolved;
+import finder.annotation.Unsolved;
 import leetcode.QuadTreeNode;
 
 /**

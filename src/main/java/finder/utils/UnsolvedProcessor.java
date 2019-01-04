@@ -1,6 +1,6 @@
-package annotation.utils;
+package finder.utils;
 
-import annotation.Unsolved;
+import finder.annotation.Unsolved;
 
 import java.util.Set;
 
@@ -9,7 +9,7 @@ import java.util.Set;
  * @date 2018/12/26 11:18
  */
 
-public class UnsolvedProcessExt implements ProcessExt {
+public class UnsolvedProcessor implements Processor {
     @Override
     public String process(Set<Class<?>> classes) {
         StringBuilder builder = new StringBuilder();

@@ -1,6 +1,9 @@
-package annotation;
+package finder;
 
-import annotation.utils.Engine;
+import finder.annotation.Fucked;
+import finder.annotation.Interesting;
+import finder.annotation.Unsolved;
+import finder.utils.Engine;
 
 import java.lang.annotation.Annotation;
 

@@ -1,9 +1,7 @@
 package leetcode.code800;
 
-import annotation.Fucked;
-import annotation.Unsolved;
-
-import java.util.Arrays;
+import finder.annotation.Fucked;
+import finder.annotation.Unsolved;
 
 /**
  * @author hr.han

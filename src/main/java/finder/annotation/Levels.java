@@ -1,4 +1,4 @@
-package annotation;
+package finder.annotation;
 
 /**
  * @author hr.han

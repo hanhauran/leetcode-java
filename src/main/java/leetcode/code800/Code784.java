@@ -1,7 +1,7 @@
 package leetcode.code800;
 
-import annotation.Interesting;
-import annotation.Unsolved;
+import finder.annotation.Interesting;
+import finder.annotation.Unsolved;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,6 +1,6 @@
 package leetcode.code800;
 
-import annotation.Unsolved;
+import finder.annotation.Unsolved;
 
 /**
  * @author hr.han

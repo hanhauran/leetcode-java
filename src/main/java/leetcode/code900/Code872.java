@@ -1,7 +1,7 @@
 package leetcode.code900;
 
-import annotation.Level;
-import annotation.Levels;
+import finder.annotation.Level;
+import finder.annotation.Levels;
 import leetcode.TreeNode;
 
 import java.util.ArrayList;

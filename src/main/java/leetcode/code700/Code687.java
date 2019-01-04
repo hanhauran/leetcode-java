@@ -1,7 +1,7 @@
 package leetcode.code700;
 
-import annotation.Fucked;
-import annotation.Unsolved;
+import finder.annotation.Fucked;
+import finder.annotation.Unsolved;
 import leetcode.TreeNode;
 
 /**

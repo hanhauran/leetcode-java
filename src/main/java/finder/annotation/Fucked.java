@@ -1,15 +1,15 @@
-package annotation;
+package finder.annotation;
 
 import java.lang.annotation.*;
 
 /**
  * @author hr.han
- * @date 2018/12/14 21:07
+ * @date 2018/12/11 15:30
  */
 
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-public @interface Interesting {
+@Target({ElementType.TYPE})
+public @interface Fucked {
     String value() default "";
 }

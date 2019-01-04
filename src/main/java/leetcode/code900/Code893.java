@@ -7,14 +7,14 @@ import finder.annotation.Unsolved;
 
 /**
  * @author hr.han
- * @date 2019/1/3 17:01
+ * @date 2019/1/4 14:58
  */
 
 @Level(Levels.EASY)
 @Unsolved
-@Fucked("每个值 v = grid[i][j] 表示 v 个正方体叠放在单元格 (i, j) 上。返回结果形体的总表面积")
-public class Code892 {
-    public int surfaceArea(int[][] grid) {
+@Fucked
+public class Code893 {
+    public int numSpecialEquivGroups(String[] a) {
         return -1;
     }
 }

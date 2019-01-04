@@ -1,4 +1,4 @@
-package annotation.utils;
+package finder.utils;
 
 import java.util.Set;
 
@@ -8,6 +8,6 @@ import java.util.Set;
  */
 
 @FunctionalInterface
-public interface ProcessExt {
+public interface Processor {
     String process(Set<Class<?>> classes);
 }

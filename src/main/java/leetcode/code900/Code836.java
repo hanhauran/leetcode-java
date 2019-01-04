@@ -1,8 +1,8 @@
 package leetcode.code900;
 
-import annotation.Interesting;
-import annotation.Level;
-import annotation.Levels;
+import finder.annotation.Interesting;
+import finder.annotation.Level;
+import finder.annotation.Levels;
 
 /**
  * @author hr.han

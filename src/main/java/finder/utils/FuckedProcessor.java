@@ -1,6 +1,6 @@
-package annotation.utils;
+package finder.utils;
 
-import annotation.Fucked;
+import finder.annotation.Fucked;
 
 import java.util.Set;
 
@@ -9,7 +9,7 @@ import java.util.Set;
  * @date 2018/12/26 11:14
  */
 
-public class FuckedProcessExt implements ProcessExt {
+public class FuckedProcessor implements Processor {
     @Override
     public String process(Set<Class<?>> classes) {
         StringBuilder builder = new StringBuilder();

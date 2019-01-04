@@ -1,6 +1,6 @@
 package leetcode.code800;
 
-import annotation.Interesting;
+import finder.annotation.Interesting;
 
 import java.util.Arrays;
 import java.util.HashSet;
