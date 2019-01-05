@@ -1,7 +1,5 @@
 package leetcode.code500;
 
-import java.util.Arrays;
-
 /**
  * @author hr.han
  * @date 2018/12/2 15:18

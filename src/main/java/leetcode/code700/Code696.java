@@ -1,8 +1,5 @@
 package leetcode.code700;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author hr.han
  * @date 2018/12/13 11:41

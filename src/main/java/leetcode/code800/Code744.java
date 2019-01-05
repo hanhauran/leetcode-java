@@ -1,7 +1,5 @@
 package leetcode.code800;
 
-import java.util.Arrays;
-
 /**
  * @author hr.han
  * @date 2018/12/22 13:24
