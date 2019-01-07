@@ -15,7 +15,7 @@ import java.util.List;
 
 @Level(Levels.EASY)
 @Interesting("全排列")
-public class Code949 {
+public class Code949_FullyArranged {
     public String largestTimeFromDigits(int[] a) {
         List<int[]> res = new ArrayList<>();
         helper(a, 0, a.length - 1, res);
@@ -58,7 +58,7 @@ public class Code949 {
     }
 
     public static void main(String[] args) {
-        Code949 code = new Code949();
+        Code949_FullyArranged code = new Code949_FullyArranged();
         List<int[]> res = new ArrayList<>();
         code.helper(new int[]{1,2,3,4}, 0, 3, res);
         res.forEach(item -> System.out.println(Arrays.toString(item)));
