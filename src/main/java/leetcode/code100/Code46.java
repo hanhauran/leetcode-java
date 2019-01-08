@@ -11,8 +11,8 @@ import java.util.List;
  */
 
 @Level(Levels.MEDIUM)
-@Question("全排列")
-@Method(Methods.BFS)
+@Question("全排列，无重复元素")
+@Method({Methods.BFS, Methods.RECURSE})
 public class Code46 {
     public List<List<Integer>> permute(int[] nums) {
         return FullyArranger.arrange(nums);

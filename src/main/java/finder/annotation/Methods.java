@@ -7,9 +7,14 @@ package finder.annotation;
 
 public enum Methods {
     /**
-     * 回溯法
+     * 广度优先搜索
      */
     BFS,
+
+    /**
+     * 深度优先搜索
+     */
+    DFS,
 
     /**
      * 双指针

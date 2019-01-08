@@ -1,9 +1,6 @@
 package algorithms;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author hr.han
@@ -17,28 +14,52 @@ public class FullyArranger {
      * @return 所有排序结果
      */
     public static List<List<Integer>> arrange(int[] items) {
+        return arrange(items, false);
+    }
+
+    public static List<List<Integer>> arrange(int[] items, boolean hasRepeatingElements) {
         if (items == null || items.length == 0) {
             return Collections.emptyList();
         }
 
+        if (hasRepeatingElements) {
+            Arrays.sort(items);
+        }
+
         List<List<Integer>> res = new ArrayList<>();
-        bfs(items, 0, res);
+        recurse(items, 0, res, hasRepeatingElements);
         return res;
     }
 
-    private static void bfs(int[] items, int offset, List<List<Integer>> res) {
+    private static void recurse(int[] items, int offset, List<List<Integer>> res, boolean hasRepeatingElements) {
         if (offset == items.length) {
-            List<Integer> list = new ArrayList<>();
-            Arrays.stream(items).forEach(list::add);
-            res.add(list);
+            add(items, res);
             return;
         }
 
+        Set<Integer> set = null;
+        if (hasRepeatingElements) {
+            set = new HashSet<>();
+        }
+
         for (int i = offset; i < items.length; i++) {
+            if (hasRepeatingElements) {
+                if (set.contains(items[i])) {
+                    continue;
+                }
+                set.add(items[i]);
+            }
+
             swap(items, offset, i);
-            bfs(items, offset + 1, res);
+            recurse(items, offset + 1, res, hasRepeatingElements);
             swap(items, offset, i);
         }
+    }
+
+    private static void add(int[] items, List<List<Integer>> res) {
+        List<Integer> list = new ArrayList<>();
+        Arrays.stream(items).forEach(list::add);
+        res.add(list);
     }
 
     private static void swap(int[] items, int left, int right) {

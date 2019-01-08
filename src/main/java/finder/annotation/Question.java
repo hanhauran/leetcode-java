@@ -12,4 +12,6 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 public @interface Question {
     String value() default "";
+    String input() default "";
+    String output() default "";
 }
