@@ -1,4 +1,4 @@
-package finder.utils;
+package finder.processor;
 
 import finder.annotation.*;
 import org.reflections.Reflections;
