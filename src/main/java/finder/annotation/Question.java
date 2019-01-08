@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  */
 
 @Documented
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface Question {
     String value() default "";

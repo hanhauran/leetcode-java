@@ -9,5 +9,11 @@ import java.util.Set;
 
 @FunctionalInterface
 public interface Processor {
-    String process(Set<Class<?>> classes);
+    /**
+     * process
+     * @param classes 被处理的类
+     * @param params 可能需要其他参数
+     * @return 结果
+     */
+    String process(Set<Class<?>> classes, Object ... params);
 }

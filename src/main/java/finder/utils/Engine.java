@@ -1,8 +1,6 @@
 package finder.utils;
 
-import finder.annotation.Fucked;
-import finder.annotation.Interesting;
-import finder.annotation.Unsolved;
+import finder.annotation.*;
 import org.reflections.Reflections;
 
 import java.lang.annotation.Annotation;
@@ -31,14 +29,20 @@ public class Engine {
             EXT_MAP.put(Fucked.class, FuckedProcessor.class.newInstance());
             EXT_MAP.put(Interesting.class, InterestingProcessor.class.newInstance());
             EXT_MAP.put(Unsolved.class, UnsolvedProcessor.class.newInstance());
+            EXT_MAP.put(Method.class, MethodsProcessor.class.newInstance());
         } catch (Exception e) {
             System.exit(-1);
         }
     }
 
-    public String process(Class<? extends Annotation> anno) {
+    public String process(Class<? extends Annotation> anno, Object ... params) {
         Set<Class<?>> classes = REFLECTIONS.getTypesAnnotatedWith(anno);
         Processor processor = EXT_MAP.get(anno);
-        return processor.process(classes);
+        return processor == null ? buildErrorMsg(anno) : processor.process(classes, params);
+    }
+
+    private static final String ERROR_MSG_CACHE = "Sorry, but there is no default processor for annotation:[";
+    private String buildErrorMsg(Class<? extends Annotation> anno) {
+        return ERROR_MSG_CACHE + anno.getSimpleName() + "]";
     }
 }

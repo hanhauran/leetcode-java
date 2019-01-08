@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class UnsolvedProcessor implements Processor {
     @Override
-    public String process(Set<Class<?>> classes) {
+    public String process(Set<Class<?>> classes, Object ... params) {
         StringBuilder builder = new StringBuilder();
         int unsolved = 0;
         for (Class<?> clazz : classes) {

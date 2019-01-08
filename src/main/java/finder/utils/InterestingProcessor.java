@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class InterestingProcessor implements Processor {
     @Override
-    public String process(Set<Class<?>> classes) {
+    public String process(Set<Class<?>> classes, Object ... params) {
         StringBuilder builder = new StringBuilder();
         builder.append("Interesting : ").append(classes.size()).append("\n");
         classes.forEach(clazz -> {
