@@ -14,4 +14,5 @@ public @interface Question {
     String value() default "";
     String input() default "";
     String output() default "";
+    String explanation() default "";
 }
