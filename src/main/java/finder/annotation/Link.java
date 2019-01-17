@@ -4,12 +4,14 @@ import java.lang.annotation.*;
 
 /**
  * @author hr.han
- * @date 2019/1/2 18:40
+ * @date 2019/1/17 16:57
+ *
+ * 前向链接
  */
 
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface Level {
-    Levels value() default Levels.EASY;
+public @interface Link {
+    Class<?> value();
 }
