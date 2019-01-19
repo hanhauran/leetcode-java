@@ -12,17 +12,15 @@ public class Code747 {
         }
 
         int fmax = Integer.MIN_VALUE, smax = Integer.MIN_VALUE;
-        int findex = -1, sindex = -1;
+        int findex = -1;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > fmax) {
                 smax = fmax;
-                sindex = findex;
                 fmax = nums[i];
                 findex = i;
             } else {
                 if (nums[i] > smax) {
                     smax = nums[i];
-                    sindex = i;
                 }
             }
         }

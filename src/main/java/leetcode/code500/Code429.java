@@ -11,6 +11,7 @@ import java.util.List;
  * @date 2018/11/30 20:29
  */
 
+@SuppressWarnings("all")
 public class Code429 {
 
     static class Node extends MultiTreeNode {

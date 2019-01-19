@@ -16,6 +16,5 @@ public class Code598 {
     }
 
     public static void main(String[] args) {
-        Code598 code = new Code598();
     }
 }

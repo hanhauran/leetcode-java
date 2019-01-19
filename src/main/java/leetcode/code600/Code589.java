@@ -11,6 +11,7 @@ import java.util.List;
  */
 
 public class Code589 {
+    @SuppressWarnings("all")
     private static class Node extends MultiTreeNode {
         public Node() {
             super();

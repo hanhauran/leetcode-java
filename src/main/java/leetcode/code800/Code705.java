@@ -8,6 +8,7 @@ import java.util.LinkedList;
  */
 
 public class Code705 {
+    @SuppressWarnings("all")
     private static class MyHashSet {
         private LinkedList<Integer>[] heap;
         private final int size = 10000;

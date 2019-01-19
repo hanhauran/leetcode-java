@@ -5,7 +5,6 @@ import finder.annotation.Levels;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author hr.han

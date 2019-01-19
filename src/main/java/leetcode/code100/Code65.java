@@ -19,7 +19,6 @@ public class Code65 {
 
         int hasPoint = -1;
         int hasE = -1;
-        int hasSpace = -1;
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             char c = chars[i];

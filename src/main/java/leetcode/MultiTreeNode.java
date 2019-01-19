@@ -7,6 +7,7 @@ import java.util.List;
  * @date 2018/11/30 20:28
  */
 
+@SuppressWarnings("all")
 public abstract class MultiTreeNode {
     public int val;
     public List children;

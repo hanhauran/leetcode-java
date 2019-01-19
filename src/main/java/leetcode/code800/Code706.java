@@ -6,6 +6,7 @@ package leetcode.code800;
  */
 
 public class Code706 {
+    @SuppressWarnings("all")
     private static class MyHashMap {
         private static final int SIZE = 1000001;
         private boolean[] keys;

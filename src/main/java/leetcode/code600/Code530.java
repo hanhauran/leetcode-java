@@ -28,7 +28,6 @@ public class Code530 {
     }
 
     public static void main(String[] args) {
-        Code530 code = new Code530();
         List<Integer> list = new ArrayList<>();
         TreeNode.EXAMPLE.list2(list);
         System.out.println(list);

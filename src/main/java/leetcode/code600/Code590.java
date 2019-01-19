@@ -10,6 +10,7 @@ import java.util.List;
  * @date 2018/12/10 17:18
  */
 
+@SuppressWarnings("all")
 public class Code590 {
     private static class Node extends MultiTreeNode {
         public Node() {

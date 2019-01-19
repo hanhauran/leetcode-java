@@ -44,7 +44,6 @@ public class Code953 {
     }
 
     public static void main(String[] args) {
-        Code953 code = new Code953();
         System.out.println("word".compareTo("wordl"));
     }
 }

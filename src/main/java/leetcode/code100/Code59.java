@@ -35,7 +35,6 @@ public class Code59 {
     }
 
     private int insert(int[][] res, int start, int level) {
-        int len = res.length - level * 2;
         for (int i = level; i < res[0].length - level; i++) {
             res[level][i] = start++;
         }
