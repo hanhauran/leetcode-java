@@ -26,10 +26,14 @@ public class Engine {
 
     private Engine() {
         try {
-            EXT_MAP.put(Fucked.class, FuckedProcessor.class.newInstance());
-            EXT_MAP.put(Interesting.class, InterestingProcessor.class.newInstance());
-            EXT_MAP.put(Unsolved.class, UnsolvedProcessor.class.newInstance());
-            EXT_MAP.put(Method.class, MethodsProcessor.class.newInstance());
+            Reflections reflections = new Reflections("finder.processor");
+            Set<Class<? extends Processor>> classes = reflections.getSubTypesOf(Processor.class);
+            for (Class<? extends Processor> clazz : classes) {
+                Annotation[] annotation = clazz.getDeclaredAnnotations();
+                if (annotation.length == 1) {
+                    EXT_MAP.put(annotation[0].annotationType(), clazz.newInstance());
+                }
+            }
         } catch (Exception e) {
             System.exit(-1);
         }

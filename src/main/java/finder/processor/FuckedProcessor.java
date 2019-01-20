@@ -9,6 +9,7 @@ import java.util.Set;
  * @date 2018/12/26 11:14
  */
 
+@Fucked
 public class FuckedProcessor implements Processor {
     @Override
     public String process(Set<Class<?>> classes, Object ... params) {

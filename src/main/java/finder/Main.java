@@ -16,11 +16,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        findAll(Fucked.class);
-        findAll(Interesting.class);
-        findAll(Unsolved.class);
-        findAll(Method.class, Methods.RECURSE);
-        findAll(Method.class, Methods.BFS);
-        findAll(Level.class);
+//        findAll(Fucked.class);
+//        findAll(Interesting.class);
+//        findAll(Unsolved.class);
+//        findAll(Method.class, Methods.RECURSE);
+//        findAll(Method.class, Methods.BFS);
+//        findAll(Level.class);
+        findAll(Question.class, "蓄水", "水");
     }
 }

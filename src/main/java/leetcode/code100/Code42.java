@@ -11,7 +11,7 @@ import finder.annotation.Unsolved;
  */
 
 @Level(Levels.HARD)
-@Question("https://leetcode-cn.com/problems/trapping-rain-water/")
+@Question("https://leetcode-cn.com/problems/trapping-rain-water/ 接雨水")
 @Unsolved
 public class Code42 {
     public int trap(int[] height) {

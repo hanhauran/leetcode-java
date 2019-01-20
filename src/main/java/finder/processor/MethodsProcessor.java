@@ -12,6 +12,7 @@ import java.util.Set;
  * @date 2019/1/8 16:14
  */
 
+@Method
 public class MethodsProcessor implements Processor {
     private static final String ERROR_MSG = "Sorry, the params inputted seems wrong, allowed params:[java.lang.Class, finder.annotation.Methods]";
 

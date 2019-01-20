@@ -9,6 +9,7 @@ import java.util.Set;
  * @date 2018/12/26 11:18
  */
 
+@Unsolved
 public class UnsolvedProcessor implements Processor {
     @Override
     public String process(Set<Class<?>> classes, Object ... params) {
